@@ -6,7 +6,7 @@
 		#:foreign-pointer)
   (:export #:define-wrapper))
 
-(in-package #:trivial-cffi-wrapper)
+(in-package #:trivial-wrapper)
 
 (defstruct (wrapper
 	    (:copier nil)
