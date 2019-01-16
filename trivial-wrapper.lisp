@@ -4,7 +4,8 @@
 		#:defctype
 		#:null-pointer
 		#:foreign-pointer)
-  (:export #:define-wrapper))
+  (:export #:define-wrapper
+	   #:wrapper-pointer))
 
 (in-package #:trivial-wrapper)
 
