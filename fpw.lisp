@@ -1,8 +1,8 @@
-(defpackage #:foreign-pointer-wrapper
+(defpackage #:fpw
   (:use #:common-lisp)
   (:export #:define-foreign-pointer-wrapper))
 
-(in-package #:foreign-pointer-wrapper)
+(in-package #:fpw)
 
 (cffi:define-foreign-type pointer-wrapper ()
   ((pointer
