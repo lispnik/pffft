@@ -1,1 +1,1 @@
-# Trivial CFFI Foreign Pointer Wrapper
+# Simple CFFI Foreign Pointer Wrapper for Type Checking
