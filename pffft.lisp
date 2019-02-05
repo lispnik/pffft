@@ -1,9 +1,9 @@
-(defpackage #:fpw
+(defpackage #:pffft
   (:use #:common-lisp)
   (:export #:define-foreign-pointer-wrapper
 	   #:pointer))
 
-(in-package #:fpw)
+(in-package #:pffft)
 
 (cffi:define-foreign-type pointer-wrapper ()
   ((pointer
