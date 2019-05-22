@@ -1,7 +1,7 @@
 (defpackage #:pffft
   (:use #:common-lisp)
   (:export #:define-foreign-pointer-wrapper
-	   #:pointer))
+           #:pointer))
 
 (in-package #:pffft)
 
@@ -27,11 +27,11 @@
        (make-instance ',name :pointer value))
 
      ,(when cleanup-func
-	`(defmethod make-instance :after ((instance ,name) &rest initargs)
-	   (declare (ignore initargs))
-	   (let ((pointer (pointer instance)))
-	     (tg:finalize
-	      instance
-	      #'(lambda ()
-		  (funcall #',cleanup-func pointer))))))
+        `(defmethod make-instance :after ((instance ,name) &rest initargs)
+           (declare (ignore initargs))
+           (let ((pointer (pointer instance)))
+             (tg:finalize
+              instance
+              #'(lambda ()
+                  (funcall #',cleanup-func pointer))))))
      ',name))
