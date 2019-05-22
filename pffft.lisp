@@ -19,8 +19,9 @@
        (:simple-parser ,name))
      
      (defmethod cffi:translate-to-foreign (value (type ,name))
-       (check-type value ,name)
-       (pointer value))
+       (if value 
+           (pointer value)
+           (cffi:null-pointer)))
 
      (defmethod cffi:translate-from-foreign (value (type ,name))
        (make-instance ',name :pointer value))
