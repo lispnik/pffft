@@ -4,6 +4,6 @@
   :license "MIT"
   :serial t
   :components ((:file "pffft"))
-  :depends-on (#:cffi #:trivial-garbage)
-  :in-order-to ((test-op (load-op "pffft-test")))
-  :perform (test-op (o c) (symbol-call "RT" "DO-TESTS")))
+  :depends-on (#:cffi
+               #:trivial-garbage)
+  :in-order-to ((test-op (load-op "pffft-test"))))
